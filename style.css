@@ -1,0 +1,13 @@
+img {
+  width: 50%;
+}
+
+h2 {
+  vertical-align: middle;
+  text-align: right;
+}
+
+.catDiv {
+  margin-top: 10px;
+  height: auto;
+}
