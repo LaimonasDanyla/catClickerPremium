@@ -11,3 +11,12 @@ h2 {
   margin-top: 10px;
   height: auto;
 }
+
+p {
+  position: absolute;
+  padding-top: 30px;
+  padding-left: 10px;
+  font-size: 1.5em;
+  font-weight: 600;
+  color: red;
+}

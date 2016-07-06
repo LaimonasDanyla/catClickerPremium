@@ -22,7 +22,7 @@ var cats = {
 var objectList = cats.catNames;
 
 var catContainerGenerator = function(i) {
-  var catContainer, catNameDiv, catName, catImageContainer;
+  var catContainer, catNameDiv, catName, catImgName, catClickSum, catImageContainer;
 
   catContainer = document.createElement("div");
   catContainer.id = "cat" + i;
@@ -36,6 +36,9 @@ var catContainerGenerator = function(i) {
   catImageContainer = document.createElement("div");
   catImageContainer.classList.add("col-md-8");
   catImageContainer.classList.add("catDiv");
+  //catImgName = document.createElement("p");
+  //catClickSum = document.createElement("p");
+
 
   var objectListName = [];
   var objectListUrl = [];
@@ -43,13 +46,19 @@ var catContainerGenerator = function(i) {
   objectListName = cats.catNames[i].name;
   objectListUrl = cats.catNames[i].url;
   catName.innerHTML = objectListName;
-  catImageContainer.innerHTML = '<img src="' + objectListUrl + '">';
+  //catImgName.innerHTML = objectListName;
+  //catImageContainer.innerHTML = '<p>' + objectListName + '</p>';
+  catImageContainer.innerHTML = '<p>' + objectListName + '</p>' + '<br>' +
+  '<p>Total Clicks: </p>' + '<img src="' + objectListUrl + '">';
   //catImageContainer.innerHTML = '<img src="' + objectListUrl + '" ' + 'style="display: none"' + '>';
+
 
 
   catNameDiv.appendChild(catName);
   catContainer.appendChild(catNameDiv);
   catContainer.appendChild(catImageContainer);
+  //catContainer.prepend(catImgName);
+  //catContainer.appendChild(catClickSum);
 
   return catContainer;
 }
