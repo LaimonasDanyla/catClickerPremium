@@ -1,22 +1,32 @@
+.container {
+  width: 90%;
+  margin: auto;
+
+}
+
 img {
-  width: 50%;
+  width: 80%;
+  margin: auto;
 }
 
-h2 {
-  vertical-align: middle;
-  text-align: right;
+h1 {
+  text-align: center;
 }
-
 .catDiv {
   margin-top: 10px;
-  height: auto;
+  text-align: center;
+
 }
 
-p {
-  position: absolute;
-  padding-top: 30px;
-  padding-left: 10px;
-  font-size: 1.5em;
+.clickSum {
+  display: none;
+  text-align: center;
+  padding-top: 10px;
+  font-size: 1.2em;
   font-weight: 600;
   color: red;
+}
+
+#digit {
+  font-size: 1,8em;
 }

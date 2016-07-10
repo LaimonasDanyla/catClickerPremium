@@ -1,4 +1,4 @@
-// Cat names:
+// Cat names and image links:
 var cats = {
   "catNames": [{
     "name": "Kitkat",
@@ -21,48 +21,73 @@ var cats = {
 
 var objectList = cats.catNames;
 
+//move result to array.
+var objectListName = [];
+var objectListUrl = [];
+
+//create needed elements for every cat
 var catContainerGenerator = function(i) {
-  var catContainer, catNameDiv, catName, catImgName, catClickSum, catImageContainer;
+  var catContainer, catNameDiv, catName, catClickSum, catImageContainer;
 
   catContainer = document.createElement("div");
   catContainer.id = "cat" + i;
-  //catContainer.classList.add("catContainer");
-
 
   catNameDiv = document.createElement("div");
-  catNameDiv.classList.add("col-md-4");
+  catNameDiv.classList.add("col-md-12");
   catNameDiv.classList.add("catDiv");
   catName = document.createElement("h2");
   catImageContainer = document.createElement("div");
-  catImageContainer.classList.add("col-md-8");
+  catImageContainer.classList.add("col-md-12");
   catImageContainer.classList.add("catDiv");
-  //catImgName = document.createElement("p");
-  //catClickSum = document.createElement("p");
 
+  catClickSum = document.createElement("div");
+  catClickSum.classList.add("col-md-12");
+  catClickSum.classList.add("clickSum");
 
-  var objectListName = [];
-  var objectListUrl = [];
-  //for (var i = 1; i < objectList.length; i++) {
   objectListName = cats.catNames[i].name;
   objectListUrl = cats.catNames[i].url;
   catName.innerHTML = objectListName;
-  //catImgName.innerHTML = objectListName;
-  //catImageContainer.innerHTML = '<p>' + objectListName + '</p>';
-  catImageContainer.innerHTML = '<p>' + objectListName + '</p>' + '<br>' +
-  '<p>Total Clicks: </p>' + '<img src="' + objectListUrl + '">';
-  //catImageContainer.innerHTML = '<img src="' + objectListUrl + '" ' + 'style="display: none"' + '>';
-
-
+  catImageContainer.innerHTML = '<img src="' + objectListUrl + '" class="img-responsive">';
 
   catNameDiv.appendChild(catName);
   catContainer.appendChild(catNameDiv);
   catContainer.appendChild(catImageContainer);
-  //catContainer.prepend(catImgName);
-  //catContainer.appendChild(catClickSum);
+  catNameDiv.appendChild(catClickSum);
 
+  var nums = [objectListName];
+
+  // Let's loop over the numbers in our array
+  for (var i = 0; i < nums.length; i++) {
+
+      // This is the number we're on...
+      var num = nums[i];
+
+      //Set the click count and show the name for same cate, for every cat
+      catClickSum.textContent = i++;
+
+      // start counter from 1
+      var counter = 1;
+
+      // how to append clicks for same cat example was taken from:
+      //https://discussions.udacity.com/t/closures-and-event-listeners-problem/166697/2
+
+      catContainer.addEventListener("click", (function(numCopy) {
+          return function() {
+            catClickSum.innerHTML = numCopy + ' has got ' + '<span id="digit">' + counter + '</span>' + ' clicks!';
+
+            //console log is needed to enable counting
+            console.log(counter++);
+            //show the name cna clicks after image or name is clicked
+            if (counter > 0) {
+              catClickSum.style.display= 'initial';
+            }
+          };
+      })(num));
+  };
   return catContainer;
 }
 
+// for every name in array attach cat container
 var catNameLocation = document.getElementById('catNamePlace');
 for (var i = 0; i < objectList.length; i++) {
   catNameLocation.appendChild(catContainerGenerator(i));
