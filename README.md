@@ -1,5 +1,10 @@
 # catClickerPremium
 
+
+Link to working application:
+https://laimonasdanyla.github.io/catClickerPremium/
+
+
 Udacity project task:
 Project Requirements for Cat Clicker Premium
 Visuals
@@ -19,6 +24,6 @@ Interaction
 When a cat name is clicked in the list, the cat display area should update to show the data for the selected cat.
 The number of clicks in the cat area should be unique to each cat, and should increment when the cat's picture is clicked.
 
-IMPLEMETATION:
-- Cat name and image appended using Javascript, source name and image array.
+IMPLEMENTATION:
+- Cat name and image appended using Javascript, source name and image taken from array.
 - Responsive using bootstrap
