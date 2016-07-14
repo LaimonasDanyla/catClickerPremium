@@ -38,7 +38,7 @@ var catContainerGenerator = function(i) {
   catName = document.createElement("h2");
   catImageContainer = document.createElement("div");
   catImageContainer.classList.add("col-md-12");
-  catImageContainer.classList.add("catDiv");
+  catImageContainer.classList.add("catImageDiv");
 
   catClickSum = document.createElement("div");
   catClickSum.classList.add("col-md-12");
@@ -79,7 +79,8 @@ var catContainerGenerator = function(i) {
             console.log(counter++);
             //show the name cna clicks after image or name is clicked
             if (counter > 0) {
-              catClickSum.style.display= 'initial';
+              catClickSum.style.display = 'initial';
+              catImageContainer.style.display = 'initial'; 
             }
           };
       })(num));

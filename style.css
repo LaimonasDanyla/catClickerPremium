@@ -15,7 +15,10 @@ h1 {
 .catDiv {
   margin-top: 10px;
   text-align: center;
+}
 
+.catImageDiv {
+  display: none;
 }
 
 .clickSum {
