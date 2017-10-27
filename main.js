@@ -2,19 +2,19 @@
 var cats = {
   "catNames": [{
     "name": "Kitkat",
-    "url": "https://pixabay.com/static/uploads/photo/2012/10/12/17/12/cat-61079_960_720.jpg"
+    "url": "https://cdn.pixabay.com/photo/2012/11/26/13/58/cat-67345_960_720.jpg"
   }, {
     "name": "Kit-teacup",
-    "url":"https://pixabay.com/static/uploads/photo/2013/09/07/08/29/cat-179842_960_720.jpg"
+    "url":"https://cdn.pixabay.com/photo/2013/01/24/05/36/cat-75957_960_720.jpg"
   }, {
     "name": "Kittin around",
-    "url": "https://pixabay.com/static/uploads/photo/2013/12/12/03/08/kitten-227009_960_720.jpg"
+    "url": "https://cdn.pixabay.com/photo/2013/09/29/12/38/cat-188088_960_720.jpg"
   }, {
     "name": "Kittles",
-    "url": "https://pixabay.com/static/uploads/photo/2015/11/15/20/21/cat-1044750_960_720.jpg"
+    "url": "https://cdn.pixabay.com/photo/2014/05/07/06/44/animal-339400_960_720.jpg"
   }, {
     "name": "Kitty Kitty Bang Bang",
-    "url": "https://pixabay.com/static/uploads/photo/2016/05/18/21/33/cat-1401637_960_720.jpg"
+    "url": "https://cdn.pixabay.com/photo/2014/10/01/10/46/cat-468232_960_720.jpg"
   }
 ]};
 
